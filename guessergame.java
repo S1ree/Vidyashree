@@ -1,15 +1,15 @@
 import java.util.*;
-class guessergame
+class Main
 {
     public static void main(String[] args)
     {
-        umpire u=new umpire();
-        u.collectingnumfromguesser();
-        u.collectingnumfromplayer();
+        Umpire u=new Umpire();
+        u.collectingNumFromGuesser();
+        u.collectingNumFromPlayer();
         u.comparing();
     }
 }
-class guesser
+class Guesser
 {
     int gnum;
     int guessingnum()
@@ -31,37 +31,37 @@ class player
     return pnum;
     }
 }
-class umpire
+class Umpire
 {
-    int numfromguesser;
-    int numfromplayer1;
-    int numfromplayer2;
-    int numfromplayer3;
-    void collectingnumfromguesser()
+    int numFromGuesser;
+    int numFromPlayer1;
+    int numFromPlayer2;
+    int numFromPlayer3;
+    void collectingNumFromGuesser()
     {
-     guesser g=new guesser();
-     numfromguesser=g.guessingnum();
+     Guesser g=new Guesser();
+     numFromGuesser=g.guessingnum();
     }
-    void collectingnumfromplayer()
+    void collectingNumFromPlayer()
     {
-        player p1=new player();
-        player p2=new player();
-        player p3=new player();
-        numfromplayer1=p1.predictingnum();
-        numfromplayer2=p2.predictingnum();
-        numfromplayer3=p3.predictingnum();
+        Player P1=new Player();
+        Player P2=new Player();
+        Player P3=new Player();
+        numFromPlayer1=P1.predictingnum();
+        numFromPlayer2=P2.predictingnum();
+        numFromPlayer3=P3.predictingnum();
     }
         void comparing()
     {
-        if(numfromplayer1==numfromguesser)
+        if(numFromPlayer1==numFromGuesser)
         {
         System.out.println("Player1 has won the game!");
         }
-        else if(numfromplayer2==numfromguesser)
+        else if(numFromPlayer2==numFromGuesser)
         {
         System.out.println("Player2 has won the game!");
         }
-        else if(numfromplayer3==numfromguesser)
+        else if(numFromPlayer3==numFromGuesser)
         {
         System.out.println("Player3 has won the game!");
         }
