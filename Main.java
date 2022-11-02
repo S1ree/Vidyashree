@@ -12,7 +12,7 @@ class Main
 class Guesser
 {
     int gnum;
-    int guessingnum()
+    int guessingNum()
     {
         System.out.println("Guesser,Kindly guess a number!");
         Scanner scan=new Scanner(System.in);
@@ -20,10 +20,10 @@ class Guesser
         return gnum;
     }
 }
-class player
+class Player
 {
     int pnum;
-    int predictingnum()
+    int predictingNum()
     {
     System.out.println("Player,Kindly guess a number!");
     Scanner scan=new Scanner(System.in);
@@ -40,16 +40,16 @@ class Umpire
     void collectingNumFromGuesser()
     {
      Guesser g=new Guesser();
-     numFromGuesser=g.guessingnum();
+     numFromGuesser=g.guessingNum();
     }
     void collectingNumFromPlayer()
     {
         Player P1=new Player();
         Player P2=new Player();
         Player P3=new Player();
-        numFromPlayer1=P1.predictingnum();
-        numFromPlayer2=P2.predictingnum();
-        numFromPlayer3=P3.predictingnum();
+        numFromPlayer1=P1.predictingNum();
+        numFromPlayer2=P2.predictingNum();
+        numFromPlayer3=P3.predictingNum();
     }
         void comparing()
     {
